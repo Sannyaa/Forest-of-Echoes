@@ -1,0 +1,1776 @@
+:: StoryTitle
+The Forest of Echoes
+
+
+:: StoryData
+{
+  "ifid": "4bebfa44-a3f5-4111-87a5-217da6f6f9b8",
+  "format": "Harlowe",
+  "format-version": "3.3.9",
+  "start": "Title",
+  "tag-colors": {
+    "forked-path": "purple",
+    "placeGem": "none",
+    "Best": "green",
+    "Best2": "blue",
+    "Bad": "red"
+  },
+  "zoom": 0.3
+}
+
+
+:: Angry Forest [angryForest] {"position":"4300,2100","size":"100,100"}
+<audio id="passage-audio" src="https://cdn.glitch.global/b6828776-51ed-45dc-a5a6-32096cb11497/whispers.mp3?v=1733013778960" autoplay loop>
+</audio>The whispers turn into guttural growls. The forest is angry, its shadows seem to twist and close in around you. You feel the ground beneath you trembling as if the forest itself is alive and enraged. The newly visible path leads to an old shrine hidden in the trees.The whispers grow louder, almost like they're telling you a story. You start to feel drowsy as vines slowly creep closer to where you're sitting.
+
+[[Run to the Shrine|Shrine]]
+[[Embrace the whispers and let the vines surround you|The Forest's Wrath]]
+
+
+
+:: Approach [forked Best] {"position":"4700,900","size":"100,100"}
+As you step closer, the figure leans toward you, its voice a soft whisper carried on the breeze. “Follow your heart to find the heart,” it murmurs, gesturing toward a fork in the path ahead. Two trails stretch into the shadows, each bathed in an otherworldly glow—one lined with blossoming flowers, the other alive with the flicker of countless fireflies.
+
+[[Follow the trail of flowers|Flowers]]
+[[Follow the trail of fireflies|Fireflies]]
+
+(set: $echoPoints to $echoPoints + 1)
+
+
+:: Approach the Deer [unlightedPath Best] {"position":"3000,1500","size":"100,100"}
+<audio id="passage-audio" src="https://cdn.glitch.global/b6828776-51ed-45dc-a5a6-32096cb11497/wind.mp3?v=1733035491230" autoplay loop>
+</audio>You step toward the deer, and its eyes meet yours. Its voice is calm yet filled with sorrow as it says, "This is what our forest used to be." Suddenly, the light dims, and everything around you fades. The blooming trees, the magical creatures, the beauty of the forest—it all vanishes as if it had never existed.
+
+The deer stands alone before you, its presence still radiant despite the emptiness now surrounding it. "I am Eryndor, the Keeper of Life in this forest," it says. "Your journey has brought you here, but the path ahead will define your fate. Choose wisely."
+
+Eryndor presents three paths for you to decide:
+
+[[Restore the Balance|Restore the balance]]
+[[Embrace the Chaos|Haunting Voices]]
+[[Seek Your Own Way|Finding your own way]]
+
+(set: $echoPoints to $echoPoints + 1)
+
+
+:: Ask for guidance [tree Best] {"position":"3200,1500","size":"100,100"}
+The faces on the tree move, their eyes glowing softly. A deep voice fills the grove, saying, “Only those who seek shall find.” The words echo in your mind as the grove shifts slightly, urging you to act. You sense the answers you need are nearby, waiting to be found.
+
+[[Look around for clues]]
+
+(set: $echoPoints to $echoPoints + 1)
+
+
+:: Blue Sapphire [stoneHold Best2] {"position":"3800,900","size":"100,100"}
+As you hold the stone, warmth spreads through your hand. The forest grows fonder, and you sense an invisible presence watching. The stone pulsates with an energy that seems to resonate with the very essence of the forest.
+
+As you hold the warm, mysterious stone, you must decide whether to [[put it in your pocket]] and keep its potential magic close, or [[toss it away]] to respect the forest's natural order, each choice carrying its own consequences for your journey ahead.
+
+(set: $echoPoints to $echoPoints + 1)
+
+<audio id="passage-audio" src="https://cdn.glitch.global/b6828776-51ed-45dc-a5a6-32096cb11497/forest.mp3?v=1733015467347" autoplay loop>
+</audio>
+
+
+
+:: Book [book Best] {"position":"2300,1100","size":"100,100"}
+As you dust off the item, you discover it's a book titled "Forest of Echoes." The book's worn condition suggests it has been well-read, perhaps passed down through generations or discovered by previous adventurers. You wonder what could be inside and if you should [[read the book|Read the Book]] or [[carry it]] in case the information comes handy
+
+(set: $echoPoints to $echoPoints + 1)
+(set: $itemCounter to $itemCounter + 1)
+(set: $collectedItems to (a:))
+(set: $collectedItems to $collectedItems + (array: "Book"))
+
+
+
+:: Catch a Firefly [fireflies] {"position":"4800,1300","size":"100,100"}
+As you extend your hand, a single firefly drifts closer, its gentle glow illuminating your fingers. It settles softly in your palm, its light pulsing like a tiny heartbeat, as if waiting for your next move. The delicate creature's warm radiance feels both comforting and magical in your hand.
+
+You can either [[hold onto it as a light source|Hidden path]] or [[release the fly and let it guide you|Follow as it Flies Away]]
+
+
+
+
+:: Compass' Guidance [compass] {"position":"2600,900","size":"100,100"}
+As you hold the glowing compass, its needle spins mysteriously before settling on a narrow, overgrown path. The forest appears to respond to the compass's magic, branches and vines gently parting to reveal your way forward. In the undergrowth ahead, something catches the light, drawing your attention.
+
+Do you investigate the object hidden beneath the foliage and [[Pick up the item|Book]] or [[Follow the Compass]] and trust its magical guidance deeper into the forest's mysteries?
+
+(set: $collectedItems to (a:))
+(set: $collectedItems to $collectedItems + (a: "Compass"))
+
+<audio id="passage-audio" src="https://cdn.glitch.global/b6828776-51ed-45dc-a5a6-32096cb11497/forest.mp3?v=1733015467347" autoplay loop>
+</audio>
+
+
+
+
+
+
+:: Complete the Quest [lightedPath Best] {"position":"3000,2200","size":"100,100"}
+<audio id="passage-audio" src="https://cdn.glitch.global/b6828776-51ed-45dc-a5a6-32096cb11497/forest.mp3?v=1733015467347" autoplay loop>
+</audio>With all three keys in hand, the deer steps forward, its form shimmering like sunlight through the trees. "You have restored the balance," it says. "The forest remembers your choices and your sacrifices. But balance is fragile. It must be protected."
+
+The forest hums softly, its paths opening before you. Though your journey is far from over, you feel a peace settle over the echoes around you.
+
+[[Step into the forest path]]
+
+(set: $echoPoints to $echoPoints + 2)
+
+
+:: Cross the bridge [forked2] {"position":"4800,1900","size":"100,100"}
+As you cross the bridge, you find yourself at a crossroads in the forest. Two distinct paths stretch out before you, each offering a unique journey ahead.
+
+[[Rocky Slope]] 
+[[Dense Thicket]]
+
+
+:: Dark Path [darkPath Bad] {"position":"4200,1700","size":"100,100"}
+As you cautiously navigate through the darkness, your foot collides with something solid. Upon closer inspection, you discover a small chest hidden in the shadows. 
+
+As you stand before the small chest hidden in the darkness, you must decide whether to [[examine the Chest|open the chest]] and potentially uncover valuable secrets, or [[ignore and keep moving|Haunting Voices 1]] to avoid unknown risks
+
+(set: $echoPoints to $echoPoints - 1)
+(set: $echoPointsNeg to $echoPointsNeg + 1)
+
+<audio id="passage-audio" src="https://cdn.glitch.global/b6828776-51ed-45dc-a5a6-32096cb11497/wind.mp3?v=1733035491230" autoplay loop>
+</audio>
+
+
+:: Dense Thicket [thicket] {"position":"4100,1300","size":"100,100"}
+Following the dark thicket, you find a lantern hanging from a tree branch. Its light flickers, casting strange shadows across the forest floor. The lantern's presence in this enchanted forest evokes the mystical traditions of the Chinese Lantern Festival, where lanterns symbolize guidance, wishes, and the triumph of light over darkness.
+
+Do you [[take the lantern]] and use its light to guide your way through the forest, or [[leave it]] behind and continue your journey relying on your own senses?
+
+
+:: Dismiss [Bad cave] {"position":"5300,1900","size":"100,100"}
+As you dismiss the mysterious echo, an unsettling change sweeps through the cave. The air grows thick with tension, and the very walls seem to shudder. The cave, as if alive and offended by your disregard, begins to close in on itself. The entrance you came through starts to shrink, rocks shifting and groaning.
+
+You realize your mistake too late. The cave doesn't take kindly to those who ignore its whispers. With your heart racing, you have only one choice left i.e. to [[follow the sound|Follow the Sound]]
+
+(set: $echoPoints to $echoPoints - 1)
+(set: $echoPointsNeg to $echoPointsNeg + 1)
+
+<audio id="passage-audio" src="https://cdn.glitch.global/b6828776-51ed-45dc-a5a6-32096cb11497/cave-retreats.mp3?v=1733101701331" autoplay loop>
+</audio>
+
+
+:: Echo Keeper [Keeper Best] {"position":"3700,1900","size":"100,100"}
+<audio id="passage-audio" src="https://cdn.glitch.global/b6828776-51ed-45dc-a5a6-32096cb11497/forest.mp3?v=1733015467347" autoplay loop>
+</audio>The ghostly figure introduces itself as the Echo keeper. All paths have led you here—to the heart of the forest. The Echo Keeper stands before you, holding a seed of life. It speaks in a voice that echoes through the grove: “Your choices have shaped this moment. Take the seed, challenge me, or find your own way.”
+
+[[Path 1: Take the seed|Seed in the Trunk]]
+[[Path 2: Challenging the Keeper|confront the keeper]]
+[[Path 3: Refuse to interact and find your own way |Finding your own way]]
+
+(set: $echoPoints to $echoPoints + 1)
+
+
+:: Echo's Heart {"position":"2800,2500","size":"100,100"}
+<center class="heading">The End
+<div id="ending-result"></div>
+</center>The Echo Keeper smiles, its form glowing brighter. “You have proven yourself beyond measure. The forest welcomes you as its guardian, a protector of its magic.”
+
+The forest around you glows with a serene light. You are invited to stay, forever becoming part of its enchantment. With the Echo Keeper’s approval, you take on its mantle, bound to the forest and its secrets.
+
+(text-colour:lime)[The forest feels like home, and you sense that your journey has come to a natural, transformative end, where you choose to stay and protect the forest.]
+
+<center>
+<div class="restart"  style="color:white;">(link:"Play Again ↺")[(restart:)]</div></center>
+
+<script>
+  document.getElementById('ending-result').innerHTML = window.displayEnding(5);
+</script>
+
+<style>
+	.heading{
+	font-weight: bold;
+    font-size: 30px;
+    }
+    
+</style>
+
+
+:: Elements {"position":"3900,100","size":"100,100"}
+(if: $pathSource > 0)[[[⬅|Introduction]]](else:)[[[⬅|Title]]]
+
+<div class="heading">Echo Points
+<span class="para">Every choice you make in the Forest of Echoes leaves a mark. These decisions accumulate as Echo Points, influencing how the forest reacts to you in the moment and shaping your ultimate fate when you face the Echo Keeper. Choose wisely—each point brings you closer to understanding the forest or losing yourself within it. </span>
+</div>
+
+<div class="heading">Items Collected
+<span class="para">Throughout your journey, you’ll discover special objects hidden in the Forest of Echoes. These items are more than just treasures—they may help you solve puzzles, overcome challenges, or provide aid in unexpected moments. </span>
+</div>
+
+<span class="para">//Note: You can check your Echo Points and the Collected Items at any point during the game by just clicking on the ⭐️ icon at the upper-right corner of the screen//</span>
+
+<style>
+	.heading{
+    font-size: 20px;
+    line-height: 2rem;
+    color: #8bca84;
+    font-weight: bold;
+    }
+    
+    .para{
+    font-size: 20px;
+    line-height: 2rem;
+    color: #DDDDDD;
+    font-weight:300;
+    }
+
+</style>
+
+
+:: Failure {"position":"2800,1700","size":"100,100"}
+<audio id="passage-audio" src="https://cdn.glitch.global/b6828776-51ed-45dc-a5a6-32096cb11497/angry-forest.mp3?v=1733015998978" autoplay loop>
+</audio>The air around you grows heavy, and the forest seems to close in. Shadows stretch longer, and the light begins to fade. Whispers rise from all directions, soft at first, then louder, circling you like a chant:
+
+"You have failed the test."
+
+The words echo in your mind, relentless and sharp, as though the forest itself is disappointed in you. The trees creak and groan, their branches shifting as if alive, their judgment weighing heavy on your soul.
+
+You feel the ground beneath you tremble. The path ahead is lost, swallowed by the darkness.
+
+[[Face the Angry Forest|Angry Forest]]
+
+
+
+:: Finding your own way [echoes] {"position":"3925,2300","size":"100,100"}
+As you push forward, determined to make your own way, the forest seems to grow quieter, like it’s watching, waiting. Each step feels heavier, and the trees seem taller, their shadows stretching longer. You’re not sure how long you’ve been walking when you come to a clearing bathed in a strange, silver light. It feels like the forest has brought you here—like this is where it all ends.
+
+From the shadows, the Echo Keeper appears, its glowing figure shifting and flickering like it’s part of the forest itself. It doesn’t speak right away, but when it does, its voice is calm and steady. "Every choice you made has left an echo," it says. "These echoes hold the story of your journey—how you’ve changed, and how you’ve changed the forest."
+
+It stretches out a hand, its gaze fixed on you. "Now, it’s time to give me the echoes you’ve gathered. They will decide what happens next."
+
+(if: $echoPointsNeg>3)[
+[[Submit your Echoes|The Wander]]
+]
+(else:)[
+[[Submit your Echoes|The Quiet Exit]]
+]
+
+
+<audio id="passage-audio" src="https://cdn.glitch.global/b6828776-51ed-45dc-a5a6-32096cb11497/wind.mp3?v=1733035491230" autoplay loop>
+</audio>
+
+
+
+:: Fireflies [fireflies Best] {"position":"4900,1100","size":"100,100"}
+As you step onto the glowing trail of fireflies, their delicate lights dance around you, guiding your path like tiny lanterns. The air feels alive with a gentle hum, and soon you find yourself in a serene clearing. The fireflies swirl around, inviting you to pause and take in the moment.
+
+Do you [[reach out to catch a firefly|Catch a Firefly]] or [[continue walking through the clearing|Walk Through the Clearing]] without interfering with the fireflies?
+
+(set: $echoPoints to $echoPoints + 1)
+
+<audio id="passage-audio" src="https://cdn.glitch.global/b6828776-51ed-45dc-a5a6-32096cb11497/forest.mp3?v=1733015467347" autoplay loop></audio>
+
+
+:: Flowers [flowers Best] {"position":"4500,1100","size":"100,100"}
+The trail of flowers leads you into a dreamlike clearing, the air heavy with the scent of blossoms. The petals seem to shimmer faintly, as though they hold some kind of energy. A sense of calm washes over you, but the forest’s intent is still unclear. The flowers seem to call out to you, their glow pulsating in rhythm with your heartbeat.
+
+Will you reach out to [[pluck a flower]] or [[keep following the trail|Leave the stone alone]], respecting the natural order of the forest?
+
+(set: $echoPoints to $echoPoints + 1)
+
+<audio id="passage-audio" src="https://cdn.glitch.global/b6828776-51ed-45dc-a5a6-32096cb11497/forest.mp3?v=1733015467347" autoplay loop>
+</audio>
+
+
+:: Follow as it Flies Away [doorway] {"position":"4800,1500","size":"100,100"}
+As you follow the firefly, it suddenly vanishes into thin air. In its place, a shimmering doorway appears, glowing softly against the dark forest backdrop. The air around the doorway feels charged with energy, as if it's waiting for you to make a decision.
+
+You can either [[enter the doorway|enter the doorway]], to uncover new revelations about the forest and your journey or you can [[turn back|turn back]] and continue your exploration of the familiar forest path instead of venturing into the unknown.
+
+
+:: Follow the Compass [doorway] {"position":"2900,1100","size":"100,100"}
+The compass leads you to a mysterious doorway hidden among the trees. Its frame glows faintly, and the air around it hums with energy. You feel drawn to it, sensing it holds the key to the next step in your journey.
+
+[[enter the doorway]]
+
+
+:: Follow the Lighted Path [lightedPath] {"position":"3000,1300","size":"100,100"}
+As you walk along the glowing path, the forest begins to change around you. The once-dark trees now bloom with vibrant flowers, their petals shimmering like tiny lanterns. Streams of light filter through the canopy, making the air itself seem alive. You see creatures you’ve never imagined—foxes with glowing tails, birds with iridescent feathers, and rabbits hopping among flowers that sparkle like jewels. Even the trees seem to hum with a quiet, ancient melody.
+
+While you’re admiring the beauty of the forest, a majestic deer steps into your path. Its antlers glow faintly, entwined with vines and blossoms. Its coat seems to shimmer, changing colors like the forest itself, and its eyes hold a wisdom that feels almost overwhelming. The deer gazes at you for a moment, then gestures with its head as if inviting you closer.
+
+[[Approach the Deer]]
+
+<audio id="passage-audio" src="https://cdn.glitch.global/b6828776-51ed-45dc-a5a6-32096cb11497/chimes.mp3?v=1733035560725" autoplay loop>
+</audio>
+
+
+
+:: Follow the Sound [stoneWater] {"position":"4900,1700","size":"100,100"}
+You start hearing a very loud sound of a stream of water flowing, as you start approaching the stream you see a bridge that goes to the other side of the forest. As you look closer, you see a glimmering stone glinting inside the water. 
+
+Do you reach out and [[grab the stone|Blue Sapphire]] or take the safe passage out and [[cross the bridge|Cross the bridge]]?
+
+
+<audio id="passage-audio" src="https://cdn.glitch.global/b6828776-51ed-45dc-a5a6-32096cb11497/flowing-water-246403.mp3?v=1732997162240" autoplay loop>
+</audio>
+
+
+
+
+:: Follow the creature [doorway Best2] {"position":"3400,900","size":"100,100"}
+You follow the creature, but it vanishes into the shadows. In its place, a shimmering doorway appears, glowing softly against the dark forest. The air around the doorway feels charged, as if it’s waiting for you to enter.
+
+As you stand before the shimmering doorway, you must decide whether to [[enter the doorway]] and venture into the unknown realms beyond, or [[turn back]] to continue exploring the familiar forest path
+
+(set: $echoPoints to $echoPoints + 1)
+
+<audio id="passage-audio" src="https://cdn.glitch.global/b6828776-51ed-45dc-a5a6-32096cb11497/forest.mp3?v=1733015467347" autoplay loop>
+</audio>
+
+
+:: Forked Path [forked Best2] {"position":"4500,900","size":"100,100"}
+As you turn back and start walking, two enchanting paths reveal themselves before you. Each trail stretches into the shadows, bathed in an otherworldly glow that beckons you forward: one lined with blossoming flowers, the other alive with the flicker of countless fireflies.
+
+[[Follow the trail of flowers|Flowers]]
+[[Follow the trail of fireflies|Fireflies]]
+
+(set: $echoPoints to $echoPoints + 1)
+
+
+:: Gem [gem Best] {"position":"5100,1900","size":"100,100"}
+As the echo fades, a sudden warmth fills your palm. You glance down to see a gem shimmering in your hand, its surface glowing with a faint, otherworldly light. It pulses gently, as if urging you to act.
+
+<div class="special-hover">"Place the gem in the hollow at the cave entrance"</div>
+(click:?page)[As soon as you place the gem, the cave entrance opens and reveals a mysterious doorway: [[Enter|enter the doorway]]
+]
+
+(set: $echoPoints to $echoPoints + 1)
+
+<audio id="passage-audio" src="https://cdn.glitch.global/b6828776-51ed-45dc-a5a6-32096cb11497/distant-glow.mp3?v=1733101791679" autoplay loop>
+</audio>
+
+
+:: Guidance [shrine] {"position":"4400,2500","size":"100,100"}
+Your choices have led you here. The shrine, ancient and weathered, stands ominously before you. The ground feels cold beneath your feet, and the air itself seems to pull you downward. A deep voice echoes from the shrine: "Balance requires sacrifice."
+
+[[Accept Your Fate|The Forest's Wrath]]
+
+
+:: Harmony Restored {"position":"2600,2500","size":"100,100"}
+<center class="heading">The End
+<div id="ending-result"></div>
+</center>The forest springs to life around you. Flowers bloom in vivid colors, animals return, and the air is filled with the sound of birdsong. The Echo Keeper nods with gratitude, and a radiant path opens before you.
+
+“You have restored harmony to the forest,” it says. “Your journey has left a lasting mark.”
+
+(text-colour:yellow)[You leave the forest with a sense of fulfillment, knowing that you've made a lasting change.]
+
+<center>
+<div class="restart"  style="color:white;">(link:"Play Again ↺")[(restart:)]</div></center>
+
+<script>
+  document.getElementById('ending-result').innerHTML = window.displayEnding(4);
+</script>
+
+<style>
+	.heading{
+	font-weight: bold;
+    font-size: 30px;
+    }
+    
+   .restart{
+    background-color:  #5F825F;
+    border-radius: 8px;
+    padding: 10px;
+	}
+    
+    .restart:hover {
+    transform: scale(1.05);
+    }
+</style>
+
+
+
+
+
+:: Haunting Voices [hauntingVoices] {"position":"4300,1900","size":"100,100"}
+<audio id="passage-audio" src="https://cdn.glitch.global/b6828776-51ed-45dc-a5a6-32096cb11497/ghost-whispers.mp3?v=1733019194865" autoplay loop>
+</audio>You start hearing haunting sounds, like whispers from the trees, echoing deep into your mind. The forest feels alive, and you feel a chill running down your spine. You know you must act quickly.
+
+[[Ignore the Sounds and Continue Walking|Angry Forest]]
+
+
+(set: $echoPoints to $echoPoints - 1)
+
+<audio id="passage-audio" src="https://cdn.glitch.global/b6828776-51ed-45dc-a5a6-32096cb11497/ghost-whispers.mp3?v=1733019194865" autoplay loop>
+</audio>
+
+
+:: Haunting Voices 1 [hauntingVoices] {"position":"4100,2000","size":"100,100"}
+You start hearing haunting sounds, like whispers from the trees, echoing deep into your mind. The forest feels alive, and you feel a chill running down your spine. You know you must act quickly.
+
+[[Turn Back and open the chest|open the chest]]
+[[Ignore the Sounds and Continue Walking|Angry Forest]]
+
+
+(set: $echoPoints to $echoPoints - 1)
+
+<audio id="passage-audio" src="https://cdn.glitch.global/b6828776-51ed-45dc-a5a6-32096cb11497/ghost-whispers.mp3?v=1733019194865" autoplay loop>
+</audio>
+
+
+:: Haunting Voices 2 [hauntingVoices] {"position":"4500,2000","size":"100,100"}
+You start hearing haunting sounds, like whispers from the trees, echoing deep into your mind. The forest feels alive, and you feel a chill running down your spine. You know you must act quickly.
+
+[[Turn Back|Leave the stone alone]]
+[[Ignore the Sounds and Continue Walking|Angry Forest]]
+
+
+(set: $echoPoints to $echoPoints - 1)
+
+<audio id="passage-audio" src="https://cdn.glitch.global/b6828776-51ed-45dc-a5a6-32096cb11497/ghost-whispers.mp3?v=1733019194865" autoplay loop>
+</audio>
+
+
+:: Header [header] {"position":"3600,300","size":"100,100"}
+<div id="echo-icon">⭐️</div>
+<div id="mute-button">(if: $isMuted is true)[🔇](else:)[🔊]</div>
+<div id="echo-modal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span> <!-- Close button -->
+    <h3>Game Progress</h3>
+    <div class="info-container">
+      <div class="info-row">
+        <span class="info-label">Echo Points:</span>
+        <span class="info-value" id="echo-points">0</span>
+      </div>
+      <div class="info-row">
+        <span class="info-label">Items Collected:</span>
+        <span class="info-value" id="items-collected">None</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+:: Hidden path [lockedChest Best2] {"position":"2800,500","size":"100,100"}
+A hidden path is revealed by the light source, as if the light was magical. The trees part slightly, showing a faint glimmer at the end of the trail. The air feels different here, lighter and full of possibility. The trees sway even without wind, and glowing mushrooms light up your path. You spot a small, locked chest half-buried in vines.
+
+Do you [[open the chest]] and see what'sinside, or [[keep Walking|Haunting Voices 1]] along the illuminated path to explore deeper mysteries of the forest?
+
+(set: $echoPoints to $echoPoints + 1)
+
+<audio id="passage-audio" src="https://cdn.glitch.global/b6828776-51ed-45dc-a5a6-32096cb11497/forest.mp3?v=1733015467347" autoplay loop>
+</audio>
+
+
+:: History {"position":"2200,1500","size":"100,100"}
+[[⬅|Read the Book]]
+<div class="history">The Forest of Echoes has a long and mystical history, shaped by ancient rituals and powerful magic. Centuries ago, the forest was established as a sacred realm when ancient High Elves performed a potent magical ritual. This ritual bound the spirits of departed elves to the land itself, allowing their essence to merge with nature.
+
+As time passed, the forest became a place of deep enchantment, where the wisdom and memories of ancestors lingered in the form of ethereal whispers. These whispers, known as the "Whispers of the Ancestors," emanate from the wind, trees, and natural elements, carrying guidance and knowledge from past generations.
+
+The forest developed its own guardians, including the Whisper Keepers - individuals with a unique sensitivity to ancestral messages. These keepers learned to interpret the whispers, serving as advisors and spiritual leaders for their kin.
+
+However, the forest's magic is not without its dangers. Over time, some darker memories and regrets of the ancestors became intertwined with the benevolent whispers, creating a delicate balance between wisdom and potential harm.
+
+The Forest of Echoes thus became a place of both wonder and caution, where one could seek ancient knowledge but also face spiritual challenges. It stands as a living testament to the deep connection between the past and present, nature and spirit, offering both guidance and trials to those who enter its enchanted realm.</div>
+
+<style>
+	.history{
+	font-size: 20px;
+    line-height: 2rem;
+    color: #E2E2E2;
+}
+</style>
+
+
+:: Introduction {"position":"4100,300","size":"100,100"}
+[[⬅|Title]]
+<div class="start">Every journey has its mysteries. First step. First discovery. First encounter. First test. The murmur of the trees… And the final choice that shapes your fate.
+
+You've wandered into the Forest of Echoes, a place where paths twist and turn, and every choice deepens your connection to the ancient magic within. Stories say that those who enter this forest rarely leave unchanged, if they leave at all.
+
+Will you uncover its secrets, forging a bond that lasts forever? Or will you become just another whisper among the trees?
+
+The echoes and whispers will guide you, revealing paths and secrets—but beware of the [[Echoes|Elements]], for they will ultimately decide your fate. Along your journey, you will uncover [[Hidden Items|Elements]], with the power to aid you when the time comes. Choose wisely, for every step shapes your destiny. You can check your progress by clicking on ⭐️ in the upper-right corner of the screen
+
+Are you ready to explore and see where the forest takes you?</div>
+[[Start my Journey |Wake Up]]
+
+(set: $pathSource to $pathSource + 1)
+
+<style>
+	.start{
+	font-size: 20px;
+    line-height: 2rem;
+    color: #E2E2E2;
+}
+</style>
+
+
+:: Key Emerges [waterKey] {"position":"3000,2000","size":"100,100"}
+<audio src="https://cdn.glitch.global/b6828776-51ed-45dc-a5a6-32096cb11497/glow.mp3?v=1733035923810" autoplay loop>
+</audio>The pool ripples as your offering sinks beneath the surface. The water grows still, and a glowing shape rises from the depths—the Water Key. Its light feels both calming and powerful in your hand.
+
+The deer reappears, its gaze approving.
+
+[[Complete the Quest]]
+
+(set: $collectedItems to (a:))
+
+
+:: Leave the stone alone [forked2 Bad] {"position":"4100,900","size":"100,100"}
+As you keep walking you reach a fork in the path. One trail leads up a rocky slope; the other descends into a dense thicket.
+
+[[Rocky Slope]] 
+[[Dense Thicket]]
+
+(if:$variableSource>0)[
+(set: $echoPoints to $echoPoints - 1)
+(set: $echoPointsNeg to $echoPointsNeg + 1)
+]
+(else:)[
+(set: $echoPoints to $echoPoints + 1)
+]
+
+
+:: Look around for clues [ghostTree Best] {"position":"3500,1700","size":"100,100"}
+As you begin searching the grove for clues, a shimmering light catches your attention. Suddenly, a ghostly figure emerges from the shadows, its presence both unsettling and captivating.
+
+[[Confront the figure|Echo Keeper]]
+
+(set: $echoPoints to $echoPoints + 1)
+
+
+:: Look for the Gem [cave Best] {"position":"5200,1700","size":"100,100"}
+As you search for clues, a soft echo reverberates through the air, carrying the words, "What you are seeking is seeking you." The voice feels both distant and familiar, sending a shiver down your spine.
+
+You feel like you could get some answers by [[acknowledging the echo|Gem]], but on the other hand, you don't want to trust the whispers and [[continue searching|Dismiss]].
+
+(set: $echoPoints to $echoPoints + 1)
+
+
+:: Loop {"position":"3900,500","size":"100,100"}
+You find yourself standing at the forest’s edge. Tall trees form a dark wall in front of you, their leaves rustling faintly. A narrow path stretches ahead, barely visible, and something about the forest feels both inviting and strange. It’s quiet except for a faint voice calling your name from deeper in the forest.
+
+Then, it dawns on you—the surroundings feel familiar. The voice, too. In that moment, you realize you’ve been given another chance. The forest has brought you back to prove your worth.
+
+What will you do now?
+
+[[Follow the Voice|The Voice]]
+[[Look Around Before Moving|Wander]]
+
+
+:: Mist Clears [trustKey] {"position":"2400,1700","size":"100,100"}
+<audio src="https://cdn.glitch.global/b6828776-51ed-45dc-a5a6-32096cb11497/glow.mp3?v=1733035923810" autoplay loop>
+</audio>You step forward, trusting the voice. Each step feels heavier than the last, but then the mist begins to part. A warm light pierces through the gray, and there on the ground lies a glowing object—the Trust Key.
+
+You feel a deep calm settle over you as the key hums softly in your hand.
+
+[[Return to the Deer|Root Key]]
+
+
+:: Offer a Silent Prayer [shrine] {"position":"4200,2500","size":"100,100"}
+Kneeling before the shrine, you offer a silent prayer. The air grows thick, and the forest seems to hold its breath. A faint light flickers within the shrine, and you hear a voice: "This is your last chance. Turn back and leave the forest, or stay and face your end."
+
+[[Ask to Leave the Forest|Loop]]
+[[Stay and Accept Your Fate|The Wander]]
+
+
+:: Pendant [pendant] {"position":"3000,900","size":"100,100"}
+As you touch the pendant, a surge of power courses through you, filling you with strength and clarity. The glowing surface seems to pulse in rhythm with your heartbeat, and you feel a strange connection to the forest itself.
+
+<div class="special-hover">"Wear the Pendant"</div>
+(click:?page)[You place the pendant around your neck, and an intense warmth spreads through your body. The glow of the pendant becomes brighter, illuminating a path ahead. The forest seems to guide you, as if the pendant has unlocked a connection.
+
+[[Follow the Lighted Path]]
+]
+
+(set: $collectedItems to (a:))
+(set: $collectedItems to $collectedItems + (array: "Pendant"))
+
+<audio id="passage-audio" src="https://cdn.glitch.global/b6828776-51ed-45dc-a5a6-32096cb11497/forest.mp3?v=1733015467347" autoplay loop>
+</audio>
+
+
+
+:: Place your hand [cave Best] {"position":"5000,1500","size":"100,100"}
+As you place your hand on the inscription, the carvings shimmer to life, revealing a small hollow shaped perfectly to hold a gem. The air fills with a distant, melodic sound of water flowing gently, beckoning you deeper into the unknown.
+
+Do you wan to [[search the area for the gem|Look for the Gem]] or [[follow the sound of the water|Follow the Sound]]?
+
+(set: $echoPoints to $echoPoints + 1)
+
+<audio id="passage-audio" src="https://cdn.glitch.global/b6828776-51ed-45dc-a5a6-32096cb11497/gentle-water.mp3?v=1733014968392" autoplay loop>
+</audio>
+
+
+:: Read the Book [readBook Best] {"position":"2200,1300","size":"100,100"}
+<span style="font-size:18px;">[[📖 Read|History]]</span>
+
+As you open the book and flip through its worn pages, the book reveals a rich tapestry of the forest's history, its hidden magic, and the guardians who've protected it through the ages. The tales speak of ancient rituals, whispers carried on the wind, and the deep connection between the living and their ancestors.
+
+When you reach the final page, a soft voice whispers, "I've been waiting for you." The air shimmers, and a majestic deer materializes before your eyes. Its presence feels both natural and otherworldly, as if it's stepped right out of the book's legends.
+
+[[Approach the Deer]]
+
+(set: $echoPoints to $echoPoints + 1)
+
+<audio id="passage-audio" src="https://cdn.glitch.global/b6828776-51ed-45dc-a5a6-32096cb11497/page-turns-book-close-31535.mp3?v=1733101928565" autoplay loop>
+</audio>
+
+
+:: Restore the balance [keys Best] {"position":"2800,1500","size":"100,100"}
+<audio id="passage-audio" src="https://cdn.glitch.global/b6828776-51ed-45dc-a5a6-32096cb11497/forest.mp3?v=1733015467347" autoplay loop>
+</audio>The deer gazes at you, its eyes deep and knowing. "You must restore the balance of the forest," it says. "Three keys must be found: Trust Key 💚, Root Key 🤎, and Water Key 🩵. Each will test your resolve and your soul. Are you ready to begin?"
+
+[[Yes|Trust Key]]
+[[No|Haunting Voices]]
+
+(set: $echoPoints to $echoPoints + 1)
+
+
+:: Rocky Slope [rockySymbols] {"position":"3700,1300","size":"100,100"}
+As you move forward, you reach a steep, rocky path lined with strange symbols etched into the stone. The slope feels both inviting and foreboding. The mysterious markings resemble ancient petroglyphs, hinting at hidden meanings and forgotten histories.
+
+You must decide whether to [[continue up the slope]] and brave the challenging ascent, or [[examine the symbols]] etched into the stone
+
+
+
+:: Root Key [rootRiddle] {"position":"2600,1800","size":"100,100"}
+<audio id="passage-audio" src="https://cdn.glitch.global/b6828776-51ed-45dc-a5a6-32096cb11497/hum.mp3?v=1733035064389" autoplay loop>
+</audio>The deer leads you to a towering ancient tree. Its bark is etched with carvings that glow faintly in the dim light. The tree seems alive, humming softly as you approach. The deer gestures to an inscription:
+
+"I grow where I’m planted but never move. Break me, and I grow louder. What am I?"
+
+The answer feels just out of reach, the carvings almost daring you to guess.
+
+[[A Root|Take the Oath]]
+[[Guess something else|Failure]]
+
+
+:: Seed in the Trunk [seedTrunk Best] {"position":"2400,900","size":"100,100"}
+You accept the seed from the keeper. As its form fades away, a hollowed-out trunk of a tree appears before you, shaped perfectly to hold the seed.
+ 
+ <div class="special-hover">"Place the seed in the trunk"</div>
+(click:?page)[You gently place the seed into the hollowed-out tree trunk. A moment passes, and then magic happens - the tree begins to glow with a soft, ethereal light. From the base of the trunk, a trail of flowers starts to bloom, creating a luminous path that beckons you forward.
+
+Following this enchanted trail, you come across a small item nestled among the gnarled roots of an ancient tree. 
+
+Do you want to [[pick up the item|Book]] or [[ignore it and keep moving|leave the book]]?
+]
+
+(set: $echoPoints to $echoPoints + 1)
+
+<audio id="passage-audio" src="https://cdn.glitch.global/b6828776-51ed-45dc-a5a6-32096cb11497/forest.mp3?v=1733015467347" autoplay loop>
+</audio>
+
+
+:: Shrine [shrine] {"position":"4300,2300","size":"100,100"}
+<audio id="passage-audio" src="https://cdn.glitch.global/b6828776-51ed-45dc-a5a6-32096cb11497/angry-forest.mp3?v=1733015998978" autoplay loop>
+</audio>The shrine’s presence is overwhelming. It exudes both menace and reverence. An inscription on its base reads: “The Keeper Sees All.” The forest grows silent, waiting for your next move.
+
+[[Offer a Silent Prayer|Offer a Silent Prayer]]
+[[Ask the Shrine for Guidance|Guidance]]
+
+
+:: Sit quietly and wait [tree Bad] {"position":"3400,1500","size":"100,100"}
+As you sit quietly, the forest's energy shifts around you. The air grows thick with anticipation, and the trees seem to lean in closer, their branches swaying without wind. The silence deepens, broken only by the faint rustling of leaves and distant, mysterious echoes.
+The change in atmosphere urges you to act. 
+
+[[Ask for guidance]]
+[[turn back]]
+
+(set: $echoPoints to $echoPoints - 1)
+(set: $echoPointsNeg to $echoPointsNeg + 1)
+
+<audio id="passage-audio" src="https://cdn.glitch.global/b6828776-51ed-45dc-a5a6-32096cb11497/angry-forest.mp3?v=1733015998978" autoplay loop>
+</audio>
+
+
+:: Step into the forest path [echoes] {"position":"2800,2300","size":"100,100"}
+Your journey has reached its final chapter. As you walk the glowing path, the Echo Keeper awaits, its form shimmering faintly in the clearing. 
+"Every choice you made has left an echo," it says. "These echoes hold the story of your journey—how you’ve changed, and how you’ve changed the forest."
+
+It stretches out a hand, its gaze fixed on you. "Now, it’s time to give me the echoes you’ve gathered. They will decide what happens next."
+
+(if: $echoPoints > 15)[[[Submit your Echoes|Echo's Heart]]](else-if: $echoPoints > 10)[[[Submit your Echoes|Harmony Restored]]](else:)[[[Submit your Echoes|The Keeper's Trust]]]
+
+<audio id="passage-audio" src="https://cdn.glitch.global/b6828776-51ed-45dc-a5a6-32096cb11497/wind.mp3?v=1733035491230" autoplay loop>
+</audio>
+
+
+:: Story {"position":"3700,100","size":"100,100"}
+[[⬅|Title]]
+<div class="story">One day, while you were on your usual hike, something caught your eye—a spot you’d never noticed before. It was strange, almost like it was calling to you. Curious, you stepped closer to the edge to get a better look. But just as you thought the ground was solid, it gave way.
+
+You fell.
+
+The drop felt endless. The wind rushed past you, and everything spun out of control. Then, nothing. Just darkness.
+
+When you woke up, you weren’t on the trail anymore. You were in a forest—a place that felt alive. It was beautiful but… strange, almost too perfect, like it wasn’t real. A part of you wanted to explore, but there was this gnawing feeling, a sense of unease. You’d heard the stories—about a forest where people go and never come back, where every step binds them tighter to its magic.
+
+You looked around for the cliff, for a way out, but it was gone. All that was left was the forest, waiting silently. Watching.
+
+You don’t know what brought you here or what’s ahead—answers or more questions—but standing still isn’t an option.
+
+The only way is forward. And so, your journey begins."
+</div>
+
+<style>
+	.story{
+	font-size: 20px;
+    line-height: 2rem;
+    color: #E2E2E2;
+}
+</style>
+
+
+
+
+:: Take the Oath [rootKey] {"position":"2800,1900","size":"100,100"}
+<audio src="https://cdn.glitch.global/b6828776-51ed-45dc-a5a6-32096cb11497/glow.mp3?v=1733035923810" autoplay loop>
+</audio>The tree shivers as you speak the answer, its carvings glowing brighter. A root emerges from the ground, holding the Root Key in its gnarled grip. A deep voice echoes: "Swear to protect the harmony of the forest."
+
+The air stills, waiting for your response.
+
+[[Kneel and swear the oath|Water Key]]
+[[Refuse and step away|Failure]]
+
+
+:: The Forest's Wrath {"position":"4500,2300","size":"100,100"}
+<center class="heading">The End
+<div id="ending-result"></div>
+</center>You let the whispers consume you, their soft murmurs turning into harsh growls. Vines creep closer, wrapping tightly around your legs, pulling you down. The ground trembles and cracks beneath you, releasing a cold, foul mist.
+
+The trees loom above, their bark splitting into hollow faces, their empty eyes filled with judgment. Shadows twist and close in, and the forest roars with anger.
+
+The vines tighten, dragging you into the earth. The last thing you hear is the forest’s voice: “You are lost.”
+
+(text-colour:red)[The forest has claimed you, just another echo swallowed by its wrath.]
+
+<center>
+<div class="restart"  style="color:white;">(link:"Play Again ↺")[(restart:)]</div></center>
+
+<script>
+  document.getElementById('ending-result').innerHTML = window.displayEnding(1);
+</script>
+
+<style>
+	.heading{
+	font-weight: bold;
+    font-size: 30px;
+    }
+    
+</style>
+
+
+:: The Keeper's Trust {"position":"3000,2500","size":"100,100"}
+<center class="heading">The End
+<div id="ending-result"></div>
+</center>The Echo Keeper observes you quietly as you bow in humility. It nods once, a faint smile on its face. “You have shown reverence and care for this forest. Though your path takes you beyond here, you carry its secrets.”
+
+The forest grants you safe passage. As you leave, faint memories of your journey linger, like fragments of a dream.
+
+(text-colour:yellow)[You are permitted to leave peacefully, becoming a silent protector of the forest’s legacy.]
+
+<center>
+<div class="restart"  style="color:white;">(link:"Play Again ↺")[(restart:)]</div></center>
+
+<script>
+  document.getElementById('ending-result').innerHTML = window.displayEnding(3);
+</script>
+
+<style>
+	.heading{
+	font-weight: bold;
+    font-size: 30px;
+    }
+    
+</style>
+
+
+:: The Quiet Exit {"position":"3725,2500","size":"100,100"}
+<center class="heading">The End
+<div id="ending-result"></div>
+</center>You follow the hidden trail, which leads you through untouched parts of the forest. It’s quiet and serene, and you feel in harmony with everything around you. The forest seems to guide your steps until you finally reach its edge, ready to step back into the outside world.
+
+(text-colour:yellow)[You’ve escaped the forest, but the details of your journey begin to fade. All that remains is a deep sense of change, as if waking from a dream.]
+
+<center>
+<div class="restart"  style="color:white;">(link:"Play Again ↺")[(restart:)]</div></center>
+
+<script>
+  document.getElementById('ending-result').innerHTML = window.displayEnding(2);
+</script>
+
+<style>
+	.heading{
+	font-weight: bold;
+    font-size: 30px;
+    }
+    
+</style>
+
+
+:: The Voice [ghost Best] {"position":"4500,700","size":"100,100"}
+A ghostly figure hovers above a glowing pond which resembles a will-o'-the-wisp, a mysterious light often seen in folklore over marshes and bogs. These supernatural entities are known to lead travelers astray, but sometimes they can also guide to hidden treasures.
+
+Will you [[approach the figure|Approach]] or [[hide and run]]?
+
+(set: $echoPoints to $echoPoints + 1)
+
+<audio id="passage-audio" src="https://cdn.glitch.global/b6828776-51ed-45dc-a5a6-32096cb11497/wind.mp3?v=1733035491230" autoplay loop>
+</audio>
+
+
+
+:: The Wander {"position":"3925,2500","size":"100,100"}
+<center class="heading">The End
+<div id="ending-result"></div>
+</center>You decide to keep wandering, ignoring the trails that might guide you. As you walk, everything seems to repeat itself. No matter which way you turn, you find yourself back at the same familiar places. Slowly, you realize you’re trapped, going in endless circles.
+
+(text-colour:red)[The forest traps you in a continuous loop, and the cycle starts all over again.]
+
+<center>
+<div class="restart"  style="color:white;">(link:"Try Again ↺")[(restart:)]</div></center>
+
+<script>
+  document.getElementById('ending-result').innerHTML = window.displayEnding(1);
+</script>
+
+<style>
+	.heading{
+	font-weight: bold;
+    font-size: 30px;
+    }
+    
+</style>
+
+
+:: Throw It [bookGone Bad] {"position":"2600,1300","size":"100,100"}
+As the book hits the ground, vines rise up and consume it. The forest around you grows darker, and the air feels heavy. The sudden change in atmosphere is unsettling, as if the forest itself is reacting to your decision to discard the book. But you have no other choice, but to [[keep walking|Haunting Voices]]
+
+(set: $echoPoints to $echoPoints - 1)
+(set: $echoPointsNeg to $echoPointsNeg + 1)
+
+<audio id="passage-audio" src="https://cdn.glitch.global/b6828776-51ed-45dc-a5a6-32096cb11497/angry-forest.mp3?v=1733015998978" autoplay loop>
+</audio>
+
+
+:: Title {"position":"3900,300","size":"100,100"}
+<center>welcome to
+<h1>(text-rotate-z:6)[The Forest]
+of Echoes</h1>\
+  <hr style="width: 80%; margin: 20px auto;">
+  <div class="bubble-container">
+    <div class="bubble" style="color:white;">[[Start|Introduction]]</div>
+    <div class="bubble" style="color:white;">[[Story]]</div>
+    <div class="bubble" style="color:white;">[[Elements]]</div>
+  </div>
+</center>
+
+<style>
+body {
+    overflow: hidden;
+  }
+
+  h1 {
+    margin: 0;
+    padding: 10px 0;
+  }
+
+  hr {
+    width: 80%;
+    margin: 10px auto;
+  }
+
+  .bubble-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+  }
+
+  .bubble {
+    background-color: #5F825F;
+    color: white;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    font-size: 70%;
+  }
+
+  .bubble:hover {
+    transform: scale(1.05);
+  }
+</style>
+
+<link rel="preload" as="image" href="https://i.imgur.com/lQT5ZMp.jpeg">
+<link rel="preload" as="image" href="https://i.imgur.com/f0vyeGP.png">
+<link rel="preload" as="image" href="https://imgur.com/938Mz13.png">
+<link rel="preload" as="image" href="https://imgur.com/tIxNdAd.png">
+<link rel="preload" as="image" href="https://imgur.com/ZugMC4Z.png">
+<link rel="preload" as="image" href="https://imgur.com/27U6xxX.png">
+<link rel="preload" as="image" href="https://imgur.com/xI2ton0.png">
+<link rel="preload" as="image" href="https://imgur.com/OTms6X7.png">
+<link rel="preload" as="image" href="https://imgur.com/fxlCPlP.png">
+<link rel="preload" as="image" href="https://imgur.com/WByocFt.png">
+
+<link rel="preload" as="image" href="https://imgur.com/jLMMIVd.png">
+<link rel="preload" as="image" href="https://imgur.com/GRTHLqh.png">
+<link rel="preload" as="image" href="https://imgur.com/cdT6IAk.png">
+<link rel="preload" as="image" href="https://imgur.com/LMJCuTn.png">
+<link rel="preload" as="image" href="https://imgur.com/zM86tA1.png">
+<link rel="preload" as="image" href="https://imgur.com/o8bQmvW.png">
+<link rel="preload" as="image" href="https://imgur.com/5gt0m8I.png">
+<link rel="preload" as="image" href="https://imgur.com/ynF5jth.png">
+<link rel="preload" as="image" href="https://imgur.com/iveud8i.png">
+<link rel="preload" as="image" href="https://imgur.com/hrm3hAg.png">
+
+<link rel="preload" as="image" href="https://imgur.com/2I2GJWl.png">
+<link rel="preload" as="image" href="https://imgur.com/pJZht1p.png">
+<link rel="preload" as="image" href="https://imgur.com/JQoSI3y.png">
+<link rel="preload" as="image" href="https://imgur.com/3M65nbB.png">
+<link rel="preload" as="image" href="https://imgur.com/96Gh0Yv.png">
+<link rel="preload" as="image" href="https://imgur.com/LIJH0QB.png">
+<link rel="preload" as="image" href="https://imgur.com/ei7nupM.png">
+<link rel="preload" as="image" href="https://imgur.com/enpqFHw.png">
+<link rel="preload" as="image" href="https://imgur.com/AHdxRyw.png">
+<link rel="preload" as="image" href="https://imgur.com/9lqNaeq.png">
+
+<link rel="preload" as="image" href="https://imgur.com/1pxOpRn.png">
+<link rel="preload" as="image" href="https://imgur.com/9g4jhSE.png">
+<link rel="preload" as="image" href="https://imgur.com/E0HDpNS.png">
+<link rel="preload" as="image" href="https://imgur.com/5hzjYLc.png">
+<link rel="preload" as="image" href="https://imgur.com/1bXFd54.png">
+<link rel="preload" as="image" href="https://imgur.com/fUulVPv.png">
+<link rel="preload" as="image" href="https://imgur.com/ywtlYTA.png">
+<link rel="preload" as="image" href="https://imgur.com/24WUvKp.png">
+<link rel="preload" as="image" href="https://imgur.com/UYQKfVt.png">
+<link rel="preload" as="image" href="https://imgur.com/rqJv6h5.png">
+
+<link rel="preload" as="image" href="https://imgur.com/lyFmr1O.png">
+<link rel="preload" as="image" href="https://imgur.com/u5M8ga9.png">
+<link rel="preload" as="image" href="https://imgur.com/BTO2IzN.png">
+<link rel="preload" as="image" href="https://imgur.com/KXDjmIQ.png">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+:: Trust Key [mist] {"position":"2600,1500","size":"100,100"}
+Mist begins to rise around you as the deer steps back into the shadows, leaving you alone. The mist thickens as you take your first step forward. It clings to you, heavy and cold, as if trying to hold you back. The path fades into the fog, and only silence greets you. A soft whisper brushes past your ear: "Trust the path, even when you cannot see."
+
+What will you do?
+
+[[Move forward into the unknown|Mist Clears]]
+[[Take a step back|Failure]]
+
+<audio id="passage-audio" src="https://cdn.glitch.global/b6828776-51ed-45dc-a5a6-32096cb11497/mist.mp3?v=1733035021206" autoplay loop>
+</audio>
+
+
+
+:: Variables [startup] {"position":"3400,300","size":"100,100"}
+(set: $echoPoints to 0)
+(set: $echoPointsNeg to 0)
+
+(set: $collectedItems to (a: ""))
+
+(set: $pathSource to 0)
+(set: $variableSource to 0)
+
+(set: $isMuted to false)
+
+
+:: Wake Up {"position":"4100,500","size":"100,100"}
+<div class="special-hover">“Open Eyes…”</div>
+(click:?page)[You wake up on soft moss, surrounded by tall trees. The forest around you is quiet and still, save for a faint, mysterious voice calling your name from somewhere deeper in the woods. This enchanted forest seems alive with hidden magic and untold secrets.
+
+Do you [[follow the voice|The Voice]] or [[look around first|Wander]]?
+
+<audio id="passage-audio" src="https://cdn.glitch.global/b6828776-51ed-45dc-a5a6-32096cb11497/ghost-whispers.mp3?v=1733019194865" autoplay loop>
+</audio>
+]
+
+
+
+
+:: Walk Through the Clearing [cave Best] {"position":"5000,1300","size":"100,100"}
+As you step through the clearing, a dark cave looms ahead, its entrance framed by ancient carvings that seem to pulse faintly with energy. An inscription above the cave reads: "Only the chosen may enter. Place your hand upon the mark to prove your worth."
+
+[[Place your hand on the inscription|Place your hand]]
+
+(set: $echoPoints to $echoPoints + 1)
+
+
+:: Wander [stoneCreature] {"position":"3600,700","size":"100,100"}
+You crouch beside the bushes and see a small creature scurry away, leaving behind a shiny stone. The stone sparkles with a faint blue glow, pulsing as if it's alive. 
+
+Will you [[pick up the stone|Blue Sapphire]] and harness its potential magic, [[follow the creature|Follow the creature]] into the unknown depths of the forest, or [[keep exploring|Leave the stone alone]] and continue your journey without disturbing the mysterious artifact.
+
+(set: $variableSource to $variableSource + 1)
+
+<audio id="passage-audio" src="https://cdn.glitch.global/b6828776-51ed-45dc-a5a6-32096cb11497/small-animal.mp3?v=1733016679105" autoplay loop>
+</audio>
+
+
+:: Water Key [waterChallenge] {"position":"3000,1800","size":"100,100"}
+<audio id="passage-audio" src="https://cdn.glitch.global/b6828776-51ed-45dc-a5a6-32096cb11497/waterKey.mp3?v=1733035101580" autoplay loop>
+</audio>The deer appears once more, leading you to a shimmering pool surrounded by weeping willows. The water reflects your face, but it shifts strangely, almost as if trying to read your thoughts. A voice rises from the water:
+
+"To receive the Water Key, you must offer something precious."
+
+The items in your possession feel heavier. The forest waits for your decision.
+
+(if: $collectedItems contains "Pendant")[[Offer the Pendant|Key Emerges]](if: $collectedItems contains "Compass")[[Offer the Compass|Key Emerges]](if: $collectedItems contains "Blue Stone")[[Offer the Blue Stone|Key Emerges]](if: $collectedItems contains "Book")[[Offer the Book|Key Emerges]]
+[[Refuse to offer|Failure]]
+
+
+
+:: Whisper {"position":"3400,2500","size":"100,100"}
+“A whisper,” you reply, hoping to match the forest's quiet sounds. The Keeper tilts their head, considering your answer. “Not quite,” they say gently, “but close enough.” The forest shifts and a path opens, leading you to the edge of the woods. 
+
+You are left with no choice but to [[push forward]]
+
+
+:: carry it [readBook Bad] {"position":"2400,1300","size":"100,100"}
+As you tuck the book under your arm, it begins to shake vigorously, as if possessed by an unseen force. 
+
+You must decide whether to [[Read the Book]] and uncover its secrets, or [[Throw It]] away, rejecting its supernatural influence
+
+(set: $echoPoints to $echoPoints - 1)
+(set: $echoPointsNeg to $echoPointsNeg + 1)
+
+
+:: confront the keeper [echoes] {"position":"3400,2100","size":"100,100"}
+The Echo Keeper steps forward and speaks: "Answer this riddle, and the path ahead will be clear." It points toward a fork in the path, saying, "The right answer will guide you." The riddle hangs in the air, testing your resolve.
+(b4r:"solid","none")+(b4r-colour:white)[//"I speak without a mouth and hear without ears. I have no body, but I come alive with the wind. What am I?"//]
+
+[[An Echo |right answer]]
+[[A Whisper |Whisper]]
+[[A Shadow |wrong answer]]
+
+
+
+:: continue up the slope [rockySymbols] {"position":"3800,1500","size":"100,100"}
+As you climb the rocky path, you hear the trees whispering in riddles. Their voices echo: "Only those who seek shall find." The ancient wisdom carried by the forest seems to be guiding you.
+
+As you stand at the crossroads, you must decide whether to [[look around for clues|Look around for clues]] and uncover hidden mysteries, or [[leave the Grove]] and continue your journey
+
+
+:: enter the doorway [tree Best] {"position":"3300,1300","size":"100,100"}
+The doorway opens into a serene moonlit grove surrounded by towering trees and glowing moss. In the center stands an ancient tree with faces carved into its bark, their expressions shifting as though alive. An inscription on the tree reads: “Answers come only to those who ask.” Will you [[ask the tree for guidance|Ask for guidance]], or [[sit quietly and wait|Sit quietly and wait]] to see what happens?
+
+(set: $echoPoints to $echoPoints + 1)
+
+<audio id="passage-audio" src="https://cdn.glitch.global/b6828776-51ed-45dc-a5a6-32096cb11497/forest.mp3?v=1733015467347" autoplay loop>
+</audio>
+
+
+:: examine the symbols [examineSymbols Best2] {"position":"3600,1500","size":"100,100"}
+As you trace the symbols with your finger, they glow faintly, and a shimmering doorway appears, glowing softly against the dark forest. The air around the doorway feels charged, as if it’s waiting for you to enter.
+
+This magical portal echoes the enchanted doorways found in many beloved stories, offering a threshold to the unknown.
+
+As you stand before the shimmering doorway, you must decide whether to [[enter the doorway]] and venture into the unknown realms beyond, or [[turn back]] to continue exploring the familiar forest path
+
+(set: $echoPoints to $echoPoints + 1)
+
+
+:: hide and run [stoneCreature Bad] {"position":"4200,700","size":"100,100"}
+You duck behind a tree and take off in the opposite direction, heart pounding. The forest seems alive, closing in around you. As you sprint through the undergrowth, you catch a glimpse of a small creature scurry away, leaving behind a shiny stone. The stone sparkles with a faint blue glow, pulsing as if it's alive. 
+
+Will you [[Pick up the stone|Blue Sapphire]] and harness its potential magic, [[Follow the creature]] into the unknown depths of the forest, or [[Keep exploring|Leave the stone alone]] and continue your journey without disturbing the mysterious artifact.
+
+(set: $echoPoints to $echoPoints - 1)
+(set: $echoPointsNeg to $echoPointsNeg + 1)
+
+
+
+:: leave it [noLantern Bad] {"position":"4200,1500","size":"100,100"}
+As you start walking into the darkness, the path grows harder to navigate. You realize too late that you've missed an important opportunity by not taking the lantern. The forest around you seems to close in, shadows deepening and obscuring your way forward.
+
+As you stand at the crossroads of your journey, you must decide whether to [[go back and take the lantern|take the lantern]] or [[walk the path without light source|Dark Path]] and brave the challenges of darkness,
+
+(set: $echoPoints to $echoPoints - 1)
+(set: $echoPointsNeg to $echoPointsNeg + 1)
+
+<audio id="passage-audio" src="https://cdn.glitch.global/b6828776-51ed-45dc-a5a6-32096cb11497/wind.mp3?v=1733035491230" autoplay loop>
+</audio>
+
+
+:: leave the Grove [ghostTree Bad] {"position":"3700,1700","size":"100,100"}
+<audio id="passage-audio" src="https://cdn.glitch.global/b6828776-51ed-45dc-a5a6-32096cb11497/angry-forest.mp3?v=1733015998978" autoplay loop>
+</audio>As you step away from the grove, a chill runs down your spine. The air feels heavy, and shadows gather around you. Suddenly, a ghostly figure appears, its form shifting and spectral. It blocks your path, its gaze piercing through you.
+
+[[Confront the Echo Keeper|Echo Keeper]]
+
+(set: $echoPoints to $echoPoints - 1)
+(set: $echoPointsNeg to $echoPointsNeg + 1)
+
+
+:: leave the book [bookGone Bad] {"position":"2500,1100","size":"100,100"}
+As the book hits the ground, vines rapidly emerge and consume it, disappearing into the earth. Though you feel an unsettling sensation wash over you, your determination to forge your own path remains strong.
+
+By rejecting the book's guidance and choosing to rely on your own instincts, you've made a bold but potentially risky choice. The forest's reaction suggests this decision may have consequences as you continue your journey through this mystical realm.
+
+[[Finding your own way]]
+
+(set: $echoPoints to $echoPoints - 1)
+(set: $echoPointsNeg to $echoPointsNeg + 1)
+
+<audio id="passage-audio" src="https://cdn.glitch.global/b6828776-51ed-45dc-a5a6-32096cb11497/angry-forest.mp3?v=1733015998978" autoplay loop>
+</audio>
+
+
+:: open the chest [chestOfferings Best2] {"position":"2800,700","size":"100,100"}
+The chest is small but beautifully carved, its surface covered in glowing patterns that seem to shift as you look at them. Carefully, you lift the lid, expecting resistance, but it opens easily. 
+
+You see two items, each radiating an otherworldly aura. You feel like carrying these could help you in your journey. However, when you pick one up, the other becomes stuck to the chest. It dawns on you that you can only take one. What will you take? Or will you leave the chest alone and not disturn the forest?
+
+[[Take the Silver Pendant|Pendant]]
+[[Take the Compass|Compass' Guidance]]
+
+(set: $echoPoints to $echoPoints + 1)
+
+<audio id="passage-audio" src="https://cdn.glitch.global/b6828776-51ed-45dc-a5a6-32096cb11497/chest-unlock.mp3?v=1733035824973" autoplay>
+</audio>T
+
+
+:: pluck a flower [deadFlowers Bad] {"position":"4500,1300","size":"100,100"}
+You feel the energy of the forest shift, as though you have taken a part of its life. The glowing petals fade, and the air grows colder. It’s as if the forest is holding its breath, waiting to see your next move. Ahead, you see a dense thicket looming before you, its shadows pulsing with an unnatural rhythm.
+
+[[Start Walking the Thicket|Dense Thicket]]
+[[Keep wandering|Haunting Voices 2]]
+
+(set: $echoPoints to $echoPoints - 1)
+(set: $echoPointsNeg to $echoPointsNeg + 1)
+
+<audio id="passage-audio" src="https://cdn.glitch.global/b6828776-51ed-45dc-a5a6-32096cb11497/angry-forest.mp3?v=1733015998978" autoplay loop>
+</audio>
+
+
+:: push forward {"position":"3725,2300","size":"100,100"}
+As you push forward, each step feels heavier, and the trees seem taller, their shadows stretching longer. You’re not sure how long you’ve been walking when you come to a clearing bathed in a strange, silver light. It feels like the forest has brought you here—like this is where it all ends.
+
+From the shadows, the Echo Keeper appears, its glowing figure shifting and flickering like it’s part of the forest itself. It doesn’t speak right away, but when it does, its voice is calm and steady. "Every choice you made has left an echo," it says. "These echoes hold the story of your journey—how you’ve changed, and how you’ve changed the forest."
+
+It stretches out a hand, its gaze fixed on you. "Now, it’s time to give me the echoes you’ve gathered. They will decide what happens next."
+
+(if: $echoPointsNeg>3)[
+[[Submit your Echoes|The Wander]]
+]
+(else:)[
+[[Submit your Echoes|The Quiet Exit]]
+]
+
+
+:: put it in your pocket [rocky Best2] {"position":"3700,1100","size":"100,100"}
+You choose to carry the stone with you. A sense of empowerment washes over you, and the forest seems to respond. A path opens up in front of you, leading to the rocky slope.
+
+[[Keep Walking|Rocky Slope]]
+
+(set: $itemCounter to $itemCounter + 1)
+(set: $collectedItems to (a:))
+(set: $collectedItems to $collectedItems + (a: "Blue Stone"))
+
+(set: $echoPoints to $echoPoints + 1)
+
+
+:: right answer [flowers Best2] {"position":"3300,2300","size":"100,100"}
+The right path lights up with the keeper pointer towards it and saying you have chosen to protect the forest and i hope you are successful in your journey
+
+[[Follow the Lighted Path]]
+
+(set: $echoPoints to $echoPoints + 1)
+
+
+:: take the lantern [hidden Best2] {"position":"4000,1500","size":"100,100"}
+Holding the lantern, the path ahead becomes clearer. The flickering light reveals a hidden path through the dense trees. Its warm glow illuminates the way forward, casting dancing shadows on the forest floor and hinting at secrets waiting to be discovered.
+
+Do you [[follow the Lantern|Hidden path]] and explore the mysterious route it reveals, or [[leave it]] behind and continue on your original path?
+
+(set: $echoPoints to $echoPoints + 1)
+
+<audio id="passage-audio" src="https://cdn.glitch.global/b6828776-51ed-45dc-a5a6-32096cb11497/chimes.mp3?v=1733035560725" autoplay loop>
+</audio>
+
+
+:: toss it away [rocky Bad] {"position":"3900,1100","size":"100,100"}
+You toss the stone aside. It vanishes into the undergrowth, and the forest seems indifferent to your choice. The only path ahead leads to the rocky slope.
+
+[[Keep Walking|Rocky Slope]]
+
+(set: $echoPoints to $echoPoints - 1)
+(set: $echoPointsNeg to $echoPointsNeg + 1)
+
+
+:: turn back [rocky Bad] {"position":"3500,1300","size":"100,100"}
+As you turn back and look again, the door has vanished. It feels like it was your only chance to get answers. In the distance, you spot a rocky slope leading ahead.
+
+[[Take the road|Rocky Slope]]
+
+(set: $echoPoints to $echoPoints - 1)
+(set: $echoPointsNeg to $echoPointsNeg + 1)
+
+
+
+
+:: wrong answer {"position":"3475,2300","size":"100,100"}
+<center class="heading">The End
+<div id="ending-result"></div>
+</center>"A shadow,” you say, thinking about how the forest has hidden so many things from view. The Keeper frowns, and the forest grows darker around you. “You see only what is hidden, but not what lies within,” the Keeper intones. The ground beneath you trembles, and vines wrap around your feet, dragging you down into the earth.
+
+(text-colour:red)[You become one with the forest, unable to leave, destined to remain in its embrace.]
+
+<center>
+<div class="restart"  style="color:white;">(link:"Play Again ↺")[(restart:)]</div></center>
+
+<script>
+  document.getElementById('ending-result').innerHTML = window.displayEnding(1);
+</script>
+
+<style>
+	.heading{
+	font-weight: bold;
+    font-size: 24px;
+    font-size: 30px;
+    }
+    
+</style>
+
+
+
+
+:: StoryScript [script]
+$(document).on('click', '#echo-icon', function () {
+  // Fetch Echo Points and Collected Items
+  var echoPoints = State.variables.echoPoints || 0;
+  var collectedItems = State.variables.collectedItems || 'None';
+
+  // Update Echo Points
+  $('#echo-points').text(echoPoints);
+
+  // Update Items Collected
+  $('#items-collected').text(collectedItems);
+
+  // Show Modal
+  $('#echo-modal').show();
+});
+
+// Close Modal with Close Button
+$(document).on('click', '.close', function () {
+  $('#echo-modal').hide();
+});
+
+// Close Modal by Clicking Outside
+$(window).on('click', function (event) {
+  if (event.target == document.getElementById('echo-modal')) {
+    $('#echo-modal').hide();
+  }
+});
+
+// Check if the audio element already exists
+if (!document.getElementById('background-audio')) {
+  // Create the audio element
+  var audio = document.createElement('audio');
+  audio.id = 'background-audio';
+  audio.src = 'https://cdn.glitch.global/b6828776-51ed-45dc-a5a6-32096cb11497/ambience-wind.mp3?v=1733016455884';
+  audio.loop = true;
+  audio.autoplay = true;
+  document.body.appendChild(audio); // Add it to the document body
+}
+
+$(document).on(':passagerender', function (event) {
+  // Stop any previous audio
+  var previousAudio = document.getElementById('passage-audio');
+  if (previousAudio) {
+    previousAudio.pause();
+    previousAudio.currentTime = 0; // Reset audio playback
+  }
+
+  // Play the new audio if it exists
+  var currentAudio = $(event.content).find('audio#passage-audio')[0];
+  if (currentAudio) {
+    currentAudio.play();
+  }
+});
+
+$(document).on('click', '#mute-button', function () {
+  State.variables.isMuted = !State.variables.isMuted;
+
+  // Toggle mute on all audio elements
+  $('audio').each(function () {
+    this.muted = State.variables.isMuted;
+  });
+
+  // Update the mute button
+  $(this).text(State.variables.isMuted ? '🔇' : '🔊');
+});
+
+window.displayEnding = function(stars) {
+  let starRating = '★'.repeat(stars) + '☆'.repeat(5 - stars);
+
+  return `
+    <div class="ending-display">
+      <div class="star-rating">${starRating}</div>
+    </div>
+  `;
+}
+
+
+
+:: StoryStylesheet [stylesheet]
+tw-story{
+background:linear-gradient(0deg, rgba(60,60,60, 0.7), rgba(60,60,60,0.8)), url("https://i.imgur.com/lQT5ZMp.jpeg");
+background-size:cover;
+  transition: background-image 0.5s ease;
+}
+
+tw-story[tags~="ghost"]{
+background:linear-gradient(0deg, rgba(60,60,60, 0.7), rgba(60,60,60,0.8)), url("https://i.imgur.com/f0vyeGP.png");
+background-size:cover;
+  transition: background-image 0.5s ease;
+}
+
+tw-story[tags~="forked"]{
+background:linear-gradient(0deg, rgba(60,60,60, 0.7), rgba(60,60,60,0.8)), url("https://imgur.com/938Mz13.png");
+background-size:cover;
+  transition: background-image 0.5s ease;
+}
+
+tw-story[tags~="flowers"]{
+background:linear-gradient(0deg, rgba(60,60,60, 0.7), rgba(60,60,60,0.8)), url("https://imgur.com/tIxNdAd.png");
+background-size:cover;
+  transition: background-image 0.5s ease;
+}
+
+tw-story[tags~="fireflies"]{
+background:linear-gradient(0deg, rgba(60,60,60, 0.7), rgba(60,60,60,0.8)), url("https://imgur.com/ZugMC4Z.png");
+background-size:cover;
+  transition: background-image 0.5s ease;
+}
+
+tw-story[tags~="deadFlowers"]{
+background:linear-gradient(0deg, rgba(60,60,60, 0.7), rgba(60,60,60,0.8)), url("https://imgur.com/27U6xxX.png");
+background-size:cover;
+  transition: background-image 0.5s ease;
+}
+
+tw-story[tags~="cave"]{
+background:linear-gradient(0deg, rgba(60,60,60, 0.7), rgba(60,60,60,0.8)), url("https://imgur.com/xI2ton0.png");
+background-size:cover;
+  transition: background-image 0.5s ease;
+}
+
+tw-story[tags~="doorway"]{
+background:linear-gradient(0deg, rgba(60,60,60, 0.7), rgba(60,60,60,0.8)), url("https://imgur.com/OTms6X7.png");
+background-size:cover;
+  transition: background-image 0.5s ease;
+}
+
+tw-story[tags~="gem"]{
+background:linear-gradient(0deg, rgba(60,60,60, 0.7), rgba(60,60,60,0.8)), url("https://imgur.com/fxlCPlP.png");
+background-size:cover;
+  transition: background-image 0.5s ease;
+}
+
+tw-story[tags~="stoneWater"]{
+background:linear-gradient(0deg, rgba(60,60,60, 0.7), rgba(60,60,60,0.8)), url("https://imgur.com/WByocFt.png");
+background-size:cover;
+  transition: background-image 0.5s ease;
+}
+
+tw-story[tags~="forked2"]{
+background:linear-gradient(0deg, rgba(60,60,60, 0.7), rgba(60,60,60,0.8)), url("https://imgur.com/jLMMIVd.png");
+background-size:cover;
+  transition: background-image 0.5s ease;
+}
+
+tw-story[tags~="stoneCreature"]{
+background:linear-gradient(0deg, rgba(60,60,60, 0.7), rgba(60,60,60,0.8)), url("https://imgur.com/GRTHLqh.png");
+background-size:cover;
+  transition: background-image 0.5s ease;
+}
+
+tw-story[tags~="stoneHold"]{
+background:linear-gradient(0deg, rgba(60,60,60, 0.7), rgba(60,60,60,0.8)), url("https://imgur.com/cdT6IAk.png");
+background-size:cover;
+  transition: background-image 0.5s ease;
+}
+
+tw-story[tags~="rocky"]{
+background:linear-gradient(0deg, rgba(60,60,60, 0.7), rgba(60,60,60,0.8)), url("https://imgur.com/LMJCuTn.png");
+background-size:cover;
+  transition: background-image 0.5s ease;
+}
+
+tw-story[tags~="rockySymbols"]{
+background:linear-gradient(0deg, rgba(60,60,60, 0.7), rgba(60,60,60,0.8)), url("https://imgur.com/zM86tA1.png");
+background-size:cover;
+  transition: background-image 0.5s ease;
+}
+
+tw-story[tags~="thicket"]{
+background:linear-gradient(0deg, rgba(60,60,60, 0.7), rgba(60,60,60,0.8)), url("https://imgur.com/o8bQmvW.png");
+background-size:cover;
+  transition: background-image 0.5s ease;
+}
+
+tw-story[tags~="hidden"]{
+background:linear-gradient(0deg, rgba(60,60,60, 0.7), rgba(60,60,60,0.8)), url("https://imgur.com/5gt0m8I.png");
+background-size:cover;
+  transition: background-image 0.5s ease;
+}
+
+tw-story[tags~="tree"]{
+background:linear-gradient(0deg, rgba(60,60,60, 0.7), rgba(60,60,60,0.8)), url("https://imgur.com/ynF5jth.png");
+background-size:cover;
+  transition: background-image 0.5s ease;
+}
+
+tw-story[tags~="ghostTree"]{
+background:linear-gradient(0deg, rgba(60,60,60, 0.7), rgba(60,60,60,0.8)), url("https://imgur.com/iveud8i.png");
+background-size:cover;
+  transition: background-image 0.5s ease;
+}
+
+tw-story[tags~="examineSymbols"]{
+background:linear-gradient(0deg, rgba(60,60,60, 0.7), rgba(60,60,60,0.8)), url("https://imgur.com/hrm3hAg.png");
+background-size:cover;
+  transition: background-image 0.5s ease;
+}
+
+tw-story[tags~="Keeper"]{
+background:linear-gradient(0deg, rgba(60,60,60, 0.7), rgba(60,60,60,0.8)), url("https://imgur.com/2I2GJWl.png");
+background-size:cover;
+  transition: background-image 0.5s ease;
+}
+
+tw-story[tags~="lockedChest"]{
+background:linear-gradient(0deg, rgba(60,60,60, 0.7), rgba(60,60,60,0.8)), url("https://imgur.com/pJZht1p.png");
+background-size:cover;
+  transition: background-image 0.5s ease;
+}
+
+tw-story[tags~="chestOfferings"]{
+background:linear-gradient(0deg, rgba(60,60,60, 0.7), rgba(60,60,60,0.8)), url("https://imgur.com/JQoSI3y.png");
+background-size:cover;
+  transition: background-image 0.5s ease;
+}
+
+tw-story[tags~="compass"]{
+background:linear-gradient(0deg, rgba(60,60,60, 0.7), rgba(60,60,60,0.8)), url("https://imgur.com/3M65nbB.png");
+background-size:cover;
+  transition: background-image 0.5s ease;
+}
+
+tw-story[tags~="pendant"]{
+background:linear-gradient(0deg, rgba(60,60,60, 0.7), rgba(60,60,60,0.8)), url("https://imgur.com/96Gh0Yv.png");
+background-size:cover;
+  transition: background-image 0.5s ease;
+}
+
+tw-story[tags~="lightedPath"]{
+background:linear-gradient(0deg, rgba(60,60,60, 0.7), rgba(60,60,60,0.8)), url("https://imgur.com/LIJH0QB.png");
+background-size:cover;
+  transition: background-image 0.5s ease;
+}
+
+tw-story[tags~="unlightedPath"]{
+background:linear-gradient(0deg, rgba(60,60,60, 0.7), rgba(60,60,60,0.8)), url("https://imgur.com/ei7nupM.png");
+background-size:cover;
+  transition: background-image 0.5s ease;
+}
+
+tw-story[tags~="book"]{
+background:linear-gradient(0deg, rgba(60,60,60, 0.7), rgba(60,60,60,0.8)), url("https://imgur.com/enpqFHw.png");
+background-size:cover;
+  transition: background-image 0.5s ease;
+}
+
+tw-story[tags~="readBook"]{
+background:linear-gradient(0deg, rgba(60,60,60, 0.7), rgba(60,60,60,0.8)), url("https://imgur.com/AHdxRyw.png");
+background-size:cover;
+  transition: background-image 0.5s ease;
+}
+
+tw-story[tags~="bookGone"]{
+background:linear-gradient(0deg, rgba(60,60,60, 0.7), rgba(60,60,60,0.8)), url("https://imgur.com/9lqNaeq.png");
+background-size:cover;
+  transition: background-image 0.5s ease;
+}
+
+tw-story[tags~="seedTrunk"]{
+background:linear-gradient(0deg, rgba(60,60,60, 0.7), rgba(60,60,60,0.8)), url("https://imgur.com/1pxOpRn.png");
+background-size:cover;
+  transition: background-image 0.5s ease;
+}
+
+tw-story[tags~="keys"]{
+background:linear-gradient(0deg, rgba(60,60,60, 0.7), rgba(60,60,60,0.8)), url("https://imgur.com/9g4jhSE.png");
+background-size:cover;
+  transition: background-image 0.5s ease;
+}
+
+tw-story[tags~="mist"]{
+background:linear-gradient(0deg, rgba(60,60,60, 0.7), rgba(60,60,60,0.8)), url("https://imgur.com/E0HDpNS.png");
+background-size:cover;
+  transition: background-image 0.5s ease;
+}
+
+tw-story[tags~="trustKey"]{
+background:linear-gradient(0deg, rgba(60,60,60, 0.7), rgba(60,60,60,0.8)), url("https://imgur.com/5hzjYLc.png");
+background-size:cover;
+  transition: background-image 0.5s ease;
+}
+
+tw-story[tags~="rootRiddle"]{
+background:linear-gradient(0deg, rgba(60,60,60, 0.7), rgba(60,60,60,0.8)), url("https://imgur.com/1bXFd54.png");
+background-size:cover;
+  transition: background-image 0.5s ease;
+}
+
+tw-story[tags~="rootKey"]{
+background:linear-gradient(0deg, rgba(60,60,60, 0.7), rgba(60,60,60,0.8)), url("https://imgur.com/fUulVPv.png");
+background-size:cover;
+  transition: background-image 0.5s ease;
+}
+
+tw-story[tags~="waterChallenge"]{
+background:linear-gradient(0deg, rgba(60,60,60, 0.7), rgba(60,60,60,0.8)), url("https://imgur.com/ywtlYTA.png");
+background-size:cover;
+  transition: background-image 0.5s ease;
+}
+
+tw-story[tags~="waterKey"]{
+background:linear-gradient(0deg, rgba(60,60,60, 0.7), rgba(60,60,60,0.8)), url("https://imgur.com/24WUvKp.png");
+background-size:cover;
+  transition: background-image 0.5s ease;
+}
+
+tw-story[tags~="echoes"]{
+background:linear-gradient(0deg, rgba(60,60,60, 0.7), rgba(60,60,60,0.8)), url("https://imgur.com/UYQKfVt.png");
+background-size:cover;
+  transition: background-image 0.5s ease;
+}
+
+tw-story[tags~="noLantern"]{
+background:linear-gradient(0deg, rgba(60,60,60, 0.7), rgba(60,60,60,0.8)), url("https://imgur.com/rqJv6h5.png");
+background-size:cover;
+  transition: background-image 0.5s ease;
+}
+
+tw-story[tags~="darkPath"]{
+background:linear-gradient(0deg, rgba(60,60,60, 0.7), rgba(60,60,60,0.8)), url("https://imgur.com/lyFmr1O.png");
+background-size:cover;
+  transition: background-image 0.5s ease;
+}
+
+tw-story[tags~="hauntingVoices"]{
+background:linear-gradient(0deg, rgba(60,60,60, 0.7), rgba(60,60,60,0.8)), url("https://imgur.com/u5M8ga9.png");
+background-size:cover;
+  transition: background-image 0.5s ease;
+}
+
+tw-story[tags~="angryForest"]{
+background:linear-gradient(0deg, rgba(60,60,60, 0.7), rgba(60,60,60,0.8)), url("https://imgur.com/BTO2IzN.png");
+background-size:cover;
+  transition: background-image 0.5s ease;
+}
+
+tw-story[tags~="shrine"]{
+background:linear-gradient(0deg, rgba(60,60,60, 0.7), rgba(60,60,60,0.8)), url("https://imgur.com/KXDjmIQ.png");
+background-size:cover;
+  transition: background-image 0.5s ease;
+}
+
+tw-link{
+  color: #8bca84;
+}
+
+.enchantment-link:hover, tw-link:hover {
+ color: yellow;
+}
+
+.special-hover:hover {
+    color: yellow; 
+}
+
+a:visited, tw-link.visited, .enchantment-link.visited {
+    color: #8bca84;
+    font-weight: bold;
+    text-decoration: inherit;
+}
+
+tw-link.visited:hover,.enchantment-link.visited:hover{
+    color: yellow;
+    font-weight: bold;
+    text-decoration: inherit;
+}
+
+
+/* Echo Icon */
+#echo-icon {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  font-size: 18px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+/* Echo Icon */
+#echo-icon {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  font-size: 18px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1001;
+  left: 50%;
+  top: 10%; /* Position it near the top of the screen */
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 350px;
+  background-color: #344734; /* Softer shade of green */
+  border-radius: 8px;
+  border: 2px solid #fff;
+  color: #fff;
+  text-align: center;
+  padding: 10px 15px;
+}
+
+/* Close Button */
+.close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Modal Header */
+.modal h3 {
+  margin-top: 0;
+  margin-bottom: 5px; /* Reduced space */
+}
+
+/* Info Container */
+.info-container {
+  margin: 0;
+  padding: 0;
+}
+
+/* Info Row */
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  margin: 3px 0; /* Reduced space between rows */
+}
+
+/* Info Labels and Values */
+.info-label {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.info-value {
+  color: #fff;
+  font-weight: bold;
+}
+
+/* Star Rating */
+.star-rating {
+  font-size: 24px;
+  color: gold;
+}
+
+/* Ending Badge */
+.ending-badge {
+  display: inline-block;
+  padding: 10px 15px;
+  margin-top: 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* Badge colors for different endings */
+.ending-badge.best { background-color: #4CAF50; }
+.ending-badge.good { background-color: #8BC34A; }
+.ending-badge.neutral { background-color: #FFC107; }
+.ending-badge.bad { background-color: #FF5722; }
+.ending-badge.worst { background-color: #F44336; }
+
+    
+.restart{
+    background-color:  #5F825F;
+    border-radius: 8px;
+    padding: 10px;
+}
+.restart:hover {
+    transform: scale(1.05);
+}
+
+#mute-button {
+  cursor: pointer;
+  font-size: 24px;
+  margin-left: 10px;
+  position: fixed;
+  top: 50px;
+  right: 10px;
+  z-index: 1000;
+}
